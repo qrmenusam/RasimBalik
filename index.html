@@ -27,83 +27,63 @@
 
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             background: #fff;
             border-bottom: 1px solid var(--border-color);
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .main-title {
             font-family: var(--title-font);
-            font-size: 4rem;
+            font-size: 4.5rem;
             margin-bottom: 5px;
             color: #1a1a1a;
         }
 
         .sub-title {
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            color: var(--accent-color);
-        }
-
-        /* Kategori Navigasyonu */
-        .nav-categories {
-            position: sticky;
-            top: 0;
-            background: white;
-            padding: 10px;
-            overflow-x: auto;
-            white-space: nowrap;
-            display: flex;
-            gap: 15px;
-            border-bottom: 1px solid var(--border-color);
-            z-index: 100;
-            scrollbar-width: none;
-        }
-        .nav-categories::-webkit-scrollbar { display: none; }
-        .nav-categories a {
-            text-decoration: none;
-            color: var(--accent-color);
             font-size: 0.85rem;
-            font-weight: 600;
-            padding: 5px 10px;
+            color: var(--accent-color);
+            font-weight: 300;
         }
 
         .menu-container {
-            max-width: 600px;
+            max-width: 500px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 25px;
         }
 
         .category-section {
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         .category-title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 2px solid #333;
+            letter-spacing: 3px;
+            border-bottom: 1.5px solid #222;
             display: inline-block;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             padding-bottom: 5px;
+            color: #000;
         }
 
         .menu-item {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 1px dotted #ccc;
+            margin-bottom: 14px;
+            padding-bottom: 6px;
+            border-bottom: 1px dotted #ddd;
         }
 
         .item-name {
             font-weight: 400;
             font-size: 0.95rem;
             flex: 1;
-            padding-right: 10px;
+            padding-right: 15px;
+            color: #444;
         }
 
         .item-price {
@@ -114,15 +94,16 @@
 
         .footer {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 60px;
+            padding: 20px;
             font-family: var(--title-font);
-            font-size: 2rem;
-            color: var(--accent-color);
+            font-size: 2.2rem;
+            color: #999;
         }
 
-        /* Mobilde Hover Etkisi */
+        /* Mobil cihazlarda dokunma hissi için hafif efekt */
         .menu-item:active {
-            background-color: #f9f9f9;
+            background-color: #f0f0f0;
         }
     </style>
 </head>
@@ -133,18 +114,23 @@
         <div class="sub-title">Rasim'in Yeri</div>
     </header>
 
-    <nav class="nav-categories">
-        <a href="#ara-sicaklar">ARA SICAKLAR</a>
-        <a href="#salatalar">SALATALAR</a>
-        <a href="#mezeler">MEZELER</a>
-        <a href="#baliklar">BALIKLAR</a>
-        <a href="#icecekler">İÇECEKLER</a>
-    </nav>
-
     <div class="menu-container">
 
+        <!-- ÇORBALAR -->
+        <section class="category-section">
+            <h2 class="category-title">Çorbalar</h2>
+            <div class="menu-item">
+                <span class="item-name">Balık Çorbası</span>
+                <span class="item-price">... ₺</span>
+            </div>
+            <div class="menu-item">
+                <span class="item-name">Mercimek Çorbası</span>
+                <span class="item-price">... ₺</span>
+            </div>
+        </section>
+
         <!-- ARA SICAKLAR -->
-        <section class="category-section" id="ara-sicaklar">
+        <section class="category-section">
             <h2 class="category-title">Ara Sıcaklar</h2>
             <div class="menu-item">
                 <span class="item-name">Kalamar Tava</span>
@@ -159,13 +145,13 @@
                 <span class="item-price">450 ₺</span>
             </div>
             <div class="menu-item">
-                <span class="item-name">Ahtapot Izgara</span>
+                <span class="item-name">Karides Tava</span>
                 <span class="item-price">400 ₺</span>
             </div>
         </section>
 
         <!-- SALATALAR -->
-        <section class="category-section" id="salatalar">
+        <section class="category-section">
             <h2 class="category-title">Salatalar</h2>
             <div class="menu-item">
                 <span class="item-name">Mevsim Salata</span>
@@ -182,7 +168,7 @@
         </section>
 
         <!-- BALIK ÇEŞİTLERİ -->
-        <section class="category-section" id="baliklar">
+        <section class="category-section">
             <h2 class="category-title">Balık Çeşitleri</h2>
             <div class="menu-item">
                 <span class="item-name">Levrek Izgara</span>
@@ -193,17 +179,13 @@
                 <span class="item-price">... ₺</span>
             </div>
             <div class="menu-item">
-                <span class="item-name">Lüfer (Porsiyon)</span>
-                <span class="item-price">... ₺</span>
-            </div>
-            <div class="menu-item">
-                <span class="item-name">Barbun Tava</span>
+                <span class="item-name">Lüfer Tava / Izgara</span>
                 <span class="item-price">... ₺</span>
             </div>
         </section>
 
         <!-- İÇECEKLER -->
-        <section class="category-section" id="icecekler">
+        <section class="category-section">
             <h2 class="category-title">İçecekler</h2>
             <div class="menu-item">
                 <span class="item-name">Kola / Fanta / Sprite</span>
@@ -214,8 +196,8 @@
                 <span class="item-price">40 ₺</span>
             </div>
             <div class="menu-item">
-                <span class="item-name">Su</span>
-                <span class="item-price">25 ₺</span>
+                <span class="item-name">Su (Cam Şişe)</span>
+                <span class="item-price">30 ₺</span>
             </div>
         </section>
 
